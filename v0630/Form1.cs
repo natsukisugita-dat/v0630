@@ -17,10 +17,10 @@ namespace v0630
         // 静的=最初に決めておく <> 動的=実行時に変更可能
         static Random rand = new Random();
 
-        int vx1 = -5;
-        int vy1 = -10;
-        int vx2 = -5;
-        int vy2 = -10;
+        int vx1 = rand.Next(-10, 50);
+        int vy1 = rand.Next(-10, 50);
+        int vx2 = rand.Next(-10, 20);
+        int vy2 = rand.Next(-10, 20);
 
         public Form1()
         {
@@ -28,6 +28,10 @@ namespace v0630
 
             label1.Left = rand.Next(ClientSize.Width - label1.Width);
             label1.Top = rand.Next(ClientSize.Height - label1.Height);
+            label3.Left = rand.Next(ClientSize.Width - label3.Width);
+            label3.Top = rand.Next(ClientSize.Height - label3.Height);
+            label4.Left = rand.Next(ClientSize.Width - label4.Width);
+            label4.Top = rand.Next(ClientSize.Height - label4.Height);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -42,6 +46,7 @@ namespace v0630
 
             label4.Left += vx2;
             label4.Top  += vy2;
+
             {
                 if (label1.Left < 0)
                 {
