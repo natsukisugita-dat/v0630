@@ -35,6 +35,7 @@ namespace v0630
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -79,11 +80,21 @@ namespace v0630
             this.label4.TabIndex = 3;
             this.label4.Text = "★";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(212, 209);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(19, 15);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "★";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(737, 392);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -102,6 +113,7 @@ namespace v0630
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 
