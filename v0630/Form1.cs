@@ -12,8 +12,11 @@ namespace v0630
 {
     public partial class Form1 : Form
     {
-        int vx = -5;
-        int vy = -10;
+        int vx = rand.Next(-10, 11);
+        int vy = rand.Next(-10, 11);
+        // 静的=最初に決めておく <> 動的=実行時に変更可能
+        static Random rand = new Random();
+
         int vx1 = -5;
         int vy1 = -10;
         int vx2 = -5;
@@ -22,20 +25,23 @@ namespace v0630
         public Form1()
         {
             InitializeComponent();
+
+            label1.Left = rand.Next(ClientSize.Width - label1.Width);
+            label1.Top = rand.Next(ClientSize.Height - label1.Height);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            timer1.Enabled = true;
+            timer1.Enabled  = true;
             timer1.Interval = 100;
             label1.Left += vx;
-            label1.Top += vy;
+            label1.Top  += vy;
 
             label3.Left += vx1;
-            label3.Top += vy1;
+            label3.Top  += vy1;
 
             label4.Left += vx2;
-            label4.Top += vy2;
+            label4.Top  += vy2;
             {
                 if (label1.Left < 0)
                 {
@@ -56,24 +62,24 @@ namespace v0630
 
                 if (label3.Left < 0)
                 {
-                    vx1 = Math.Abs(vx);
+                    vx1 = Math.Abs(vx1);
                 }
                 if (label3.Right > ClientSize.Width)
                 {
-                    vx1 = -Math.Abs(vx);
+                    vx1 = -Math.Abs(vx1);
                 }
                 if (label3.Top < 0)
                 {
-                    vy1 = Math.Abs(vy);
+                    vy1 = Math.Abs(vy1);
                 }
                 if (label3.Bottom > ClientSize.Height)
                 {
-                    vy1 = -Math.Abs(vy);
+                    vy1 = -Math.Abs(vy1);
                 }
 
                 if (label4.Left < 0)
                 {
-                    vx2 = Math.Abs(vx);
+                    vx2 = Math.Abs(vx2);
                 }
                 if (label4.Right > ClientSize.Width)
                 {
@@ -81,11 +87,11 @@ namespace v0630
                 }
                 if (label4.Top < 0)
                 {
-                    vy2 = Math.Abs(vy);
+                    vy2 = Math.Abs(vy2);
                 }
                 if (label4.Bottom > ClientSize.Height)
                 {
-                    vy2 = -Math.Abs(vy);
+                    vy2 = -Math.Abs(vy2);
                 }
             }
 
@@ -101,8 +107,8 @@ namespace v0630
                 timer1.Enabled = false;
             }
 
-            label2.Left = fpos.X - label2.Width / 2;
-            label2.Top = fpos.Y - label2.Height / 2;
+            label2.Left = fpos.X - label2.Width  / 2;
+            label2.Top  = fpos.Y - label2.Height / 2;
         }
 
         private void label3_Click(object sender, EventArgs e)
