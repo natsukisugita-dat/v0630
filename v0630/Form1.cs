@@ -14,6 +14,8 @@ namespace v0630
     {
         int vx = -5;
         int vy = -10;
+        int vx1 = -5;
+        int vy1 = -10;
         public Form1()
         {
             InitializeComponent();
@@ -24,8 +26,10 @@ namespace v0630
             timer1.Enabled = true;
             label1.Left += vx;
             label1.Top += vy;
+            label3.Left += vx1;
+            label3.Top += vy1;
 
-            if(label1.Left<0)
+            if (label1.Left<0)
             {
                 vx = -vx;
             }
@@ -41,11 +45,33 @@ namespace v0630
             {
                 vy = -vy;
             }
+
+            if (label3.Left < 0)
+            {
+                vx1 = -vx1;
+            }
+            if (label3.Right > ClientSize.Width)
+            {
+                vx1 = -vx1;
+            }
+            if (label3.Top < 0)
+            {
+                vy1 = -vy1;
+            }
+            if (label3.Bottom > ClientSize.Height)
+            {
+                vy1 = -vy1;
+            }
             Point spos = MousePosition;
             Point fpos = PointToClient(spos);
 
             label2.Left = fpos.X - label2.Width / 2;
             label2.Top = fpos.Y - label2.Height / 2;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
