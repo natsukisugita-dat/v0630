@@ -16,6 +16,8 @@ namespace v0630
         int vy = -10;
         int vx1 = -5;
         int vy1 = -10;
+        int vx2 = -5;
+        int vy2 = -10;
 
         public Form1()
         {
@@ -31,6 +33,9 @@ namespace v0630
 
             label3.Left += vx1;
             label3.Top += vy1;
+
+            label4.Left += vx2;
+            label4.Top += vy2;
 
             if (label1.Left<0)
             {
@@ -66,6 +71,22 @@ namespace v0630
                 vy1 = -Math.Abs(vy);
             }
 
+            if(label4.Left<0)
+            {
+                vx2 = Math.Abs(vx);
+            }
+            if(label4.Right>ClientSize.Width)
+            {
+                vx2 = -Math.Abs(vx2);
+            }
+            if(label4.Top<0)
+            {
+                vy2 = Math.Abs(vy);
+            }
+            if(label4.Bottom>ClientSize.Height)
+            {
+                vy2 = -Math.Abs(vy);
+            }
 
             Point spos = MousePosition;
             Point fpos = PointToClient(spos);
@@ -80,6 +101,11 @@ namespace v0630
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
         {
 
         }
