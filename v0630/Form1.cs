@@ -33,36 +33,36 @@ namespace v0630
 
             if (label1.Left<0)
             {
-                vx = -vx;
+                vx = Math.Abs(vx);
             }
             if(label1.Right>ClientSize.Width)
             {
-                vx = -vx;
+                vx = -Math.Abs(vx);
             }
             if (label1.Top < 0)
             {
-                vy = -vy;
+                vy = Math.Abs(vy);
             }
             if (label1.Bottom > ClientSize.Height)
             {
-                vy = -vy;
+                vy = -Math.Abs(vy);
             }
 
             if (label3.Left < 0)
             {
-                vx1 = -vx1;
+                vx1 = Math.Abs(vx);
             }
             if (label3.Right > ClientSize.Width)
             {
-                vx1 = -vx1;
+                vx1 = -Math.Abs(vx);
             }
             if (label3.Top < 0)
             {
-                vy1 = -vy1;
+                vy1 = Math.Abs(vy);
             }
             if (label3.Bottom > ClientSize.Height)
             {
-                vy1 = -vy1;
+                vy1 = -Math.Abs(vy);
             }
 
 
