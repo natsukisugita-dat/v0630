@@ -63,7 +63,7 @@ namespace v0630
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(545, 106);
+            this.label3.Location = new System.Drawing.Point(521, 136);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(19, 15);
             this.label3.TabIndex = 2;
@@ -73,12 +73,11 @@ namespace v0630
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(687, 45);
+            this.label4.Location = new System.Drawing.Point(231, 268);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(19, 15);
+            this.label4.Size = new System.Drawing.Size(38, 15);
             this.label4.TabIndex = 3;
-            this.label4.Text = "★";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.label4.Text = "label4";
             // 
             // Form1
             // 
