@@ -66,19 +66,19 @@ namespace v0630
             {
                 vy1 = -vy1;
             }
-            if (label3.Left < 0)
+            if (label4.Left < 0)
             {
                 vx2 = -vx2;
             }
-            if (label3.Right > ClientSize.Width)
+            if (label4.Right > ClientSize.Width)
             {
                 vx2 = -vx2;
             }
-            if (label3.Top < 0)
+            if (label4.Top < 0)
             {
                 vy2 = -vy2;
             }
-            if (label3.Bottom > ClientSize.Height)
+            if (label4.Bottom > ClientSize.Height)
             {
                 vy2 = -vy2;
             }
